@@ -1,1 +1,27 @@
-<div class="container"></div>
+<div class="container">
+  <form class="form" [formGroup]="form">
+    <mat-form-field class="form__row" appearance="fill">
+      <mat-label>Choose currency</mat-label>
+      <mat-select formControlName="currency">
+        <ng-container *ngFor="let currency of currencies$ | async; trackBy: trackCurrency">
+          <mat-option [value]="currency">{{ currency.Name }}({{ currency.CharCode }})</mat-option>
+        </ng-container>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="form__row" appearance="fill">
+      <mat-label>Strategies</mat-label>
+      <mat-select formControlName="strategy">
+        <ng-container *ngFor="let strategy of strategies$ | async">
+          <mat-option [value]="strategy">{{ strategy }}</mat-option>
+        </ng-container>
+      </mat-select>
+    </mat-form-field>
+  </form>
+
+  <div class="currency">
+    <ng-container *ngIf="currency$ | async as currency">
+      <h2>{{ currency.Value }}</h2>
+    </ng-container>
+  </div>
+</div>
