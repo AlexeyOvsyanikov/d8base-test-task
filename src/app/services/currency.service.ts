@@ -4,11 +4,7 @@ import { Observable } from 'rxjs';
 
 import { ICurrencyReponse } from '@interfaces';
 
-import {
-  LoadingStrategy,
-  JSONLoadingStrategy,
-  XMLLoadingStrategy,
-} from './strategies/base.strategy';
+import { LoadingStrategy, JSONLoadingStrategy } from './strategies';
 
 @Injectable({
   providedIn: 'root',

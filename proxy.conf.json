@@ -1,0 +1,20 @@
+{
+  "/xml/*": {
+    "target": "https://www.cbr-xml-daily.ru",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/xml": "/daily_eng_utf8.xml"
+    },
+    "logLevel": "debug"
+  },
+  "/json/*": {
+    "target": "https://www.cbr-xml-daily.ru",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/json": "/daily_json.js"
+    },
+    "logLevel": "debug"
+  }
+}

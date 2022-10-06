@@ -87,6 +87,9 @@
               "browserTarget": "d8base-test-task:build:development"
             }
           },
+          "options": {
+            "proxyConfig": "proxy.conf.json"
+          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {

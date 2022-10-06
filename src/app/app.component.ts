@@ -10,7 +10,7 @@ import {
   tap,
 } from 'rxjs';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
@@ -18,7 +18,7 @@ import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { CurrencyService } from '@services';
 
 import { ICurrency } from './interfaces/currency.interface';
-import { JSONLoadingStrategy, XMLLoadingStrategy } from './services/strategies/base.strategy';
+import { JSONLoadingStrategy, XMLLoadingStrategy } from './services/strategies';
 
 @UntilDestroy()
 @Component({
